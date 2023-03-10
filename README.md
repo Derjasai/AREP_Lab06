@@ -1,4 +1,4 @@
-# AREP Taller 5
+# AREP Taller 6
 
 Aplicativo que realiza la inscripción de logs en una base de datos no relacional. El log a guardar se debe de escribir en un campo de texto y al momento de enviarlo a la base de datos esta responde con los 10 últimos logs guardados en ella.
 
@@ -41,13 +41,10 @@ La nueva documentación generada puede encontrarla en la ruta /target/site/apido
 
 ## Comprobración del aplicativo mediante test de usuario
 
-Esta es la aplicación de manera simple que realiza una solicitud GET a nuestros servicios de logs
-
-
-Como podemos ver en esta imagen el servidor guarda nuestro último log y nos muestra los últimos logs que hay en la base de datos, en este caso no alcanza a mostrar 10 porque no hay suficientes logs en la base de datos
+Ingresamos al servidor de balanceador de carga para poder enviar solicitudes, como podemos ver son hace las diferentes solicitudes
 ![img.png](imgs/img.png)
 
-En las siguientes imagenes podemos ver diferentes consultas a los servidores que se comunican con la base de datos y el formato de respuesta es un JSON
+En las siguientes imagenes vemos como se hace solicitud directamente a cada instancia del servicio de logs
 ![img_1.png](imgs/img_1.png)
 ![img_2.png](imgs/img_2.png)
 ![img_3.png](imgs/img_3.png)
