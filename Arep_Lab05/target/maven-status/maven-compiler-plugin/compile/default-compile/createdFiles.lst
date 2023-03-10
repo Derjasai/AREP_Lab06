@@ -1,0 +1,3 @@
+edu\eci\arep\app\services\impl\MongoDBServiceImpl.class
+edu\eci\arep\app\services\MongoDBService.class
+edu\eci\arep\app\LogsServer.class
