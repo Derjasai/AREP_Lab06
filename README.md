@@ -13,7 +13,7 @@ Aplicativo que realiza la inscripción de logs en una base de datos no relaciona
 
 ### Descripción de la arquitectura
 
-En esta aplicación tenemos la conexión a una base de datos mediante 3 instancias de una aplicación de logs, así mismo tenemos un balanceador de carga que funciona mediante el algoritmo de round robin para distribuir las peticiones que llegan sobre los 3 servidores que se comunican con nuestra base de datos no relacional.
+La arquitectura se representa con 3 instancias diferentes del servidor que recibe los logs, una instancia diferente de bases de datos a la cual se le conectan los 3 diferentes servicios de logs, finalmente en una instancia aparte tenemos el front de nuestro aplicativo el cual envia solicitudes a los diferentes 3 instancias del servicio de logs mediante un algoritmo de RoundRobin para gestionar las diferentes solicitudes que le lleguen
 
 #### Diseño de clases
 Se realiza un "Repositorio" diferente para cada gran componente, en este caso tenemos los logserver que se comunican con la base de datos en un directorio aparte de el loadbalancer, puesto que en escencia tienen un funcionamiento diferente.
@@ -23,7 +23,7 @@ Para el servicio de comunicación de la base de datos se implementa una interfaz
 
 Para correr el programa primero se descarga el repositorio con el siguiente comando
 ```
-https://github.com/Derjasai/AREP_Lab05.git
+https://github.com/Derjasai/AREP_Lab06.git
 ```
 
 Una vez clonado el repositorio ingrese en la carpeta descargada y corra el siguiente comando para ejecutar el programa
